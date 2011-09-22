@@ -8,8 +8,9 @@ It's inspired from jQuery tagedit plug-in.
 It's a impressive jQuery plug-in.
 
 
-For some reason I rewrote all the JS logic and only use the CSS I need ,
-since we need not to have a form or input in ZK application.
+For some reason I rewrote most the JS logic ,
+since we need not to have a form or input in ZK application ,
+that could make things simpler.
 
 And we could handle the auto-completed part better in ZK's model way. :)
 
