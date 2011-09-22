@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<package name="zul.fiddle.tagbox" language="xul/html">
+	<script src="lib/jquery.autoGrowInput.js" />
+	<widget name="Tagbox" />
+	<widget name="Tag" />
+</package>

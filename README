@@ -1,0 +1,18 @@
+
+This is a project for porting tagedit to ZK Core.
+
+
+It's inspired from jQuery tagedit plug-in.
+( http://tagedit.webwork-albrecht.de/ )
+
+It's a impressive jQuery plug-in.
+
+
+For some reason I rewrote all the JS logic and only use the CSS I need ,
+since we need not to have a form or input in ZK application.
+
+And we could handle the auto-completed part better in ZK's model way. :)
+
+
+For more details , please reference to
+https://github.com/tony1223/zk-tagbox
