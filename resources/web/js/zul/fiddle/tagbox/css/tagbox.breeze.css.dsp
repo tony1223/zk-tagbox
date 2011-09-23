@@ -30,3 +30,7 @@
 .z-tagbox li.z-tag-deleted:hover {padding-right: 5px; background-color: #FFD6D6; border-color: #FFB7B7; border-style: dashed; }
 .z-tagbox li.z-tag-deleted span {text-decoration: line-through;}
 .z-tagbox li.z-tag-deleted a.z-tag-close {margin-right: 0;}
+
+.z-tagbox li.z-tag .z-tag-label{
+	padding-right:8px;
+}

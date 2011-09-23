@@ -7,7 +7,7 @@ function (out) {
 			'<span id="',uuid,'-label" class="z-tag-label">',
 				this._label,
 			'</span>',
-			'<a id="',uuid,'-close"  class="z-tag-close">x</a>',
+			'<a id="',uuid,'-remove" class="z-tag-close">x</a>',
 		'</li>'
 	);
 
