@@ -1,6 +1,16 @@
 zul.fiddle.tagbox.Tagbox = zk.$extends(zk.Widget, {
 	breakKeyCodes: [ 13, 44 ],
+	_insertable:false,
 	$define: {
+		insertable:function(){
+			if(this.desktop){
+				if(this._insertable){
+					jq(this.$n("new")).show();
+				}else{
+					jq(this.$n("new")).hide();
+				}
+			}
+		}
 	},
 	getInputNode: function(){
 		return this.$n("new-input");
@@ -17,7 +27,7 @@ zul.fiddle.tagbox.Tagbox = zk.$extends(zk.Widget, {
 		this.domListen_(inp[0], "onBlur", "_doClearInput");
 		this.domListen_(inp[0], "onKeypress", "_doKeypress");
 		this.domListen_(inp[0], "onKeydown", "_doKeyDown");
-		
+
 	},
 	_doKeyDown: function(event){
 		var code = event.keyCode > 0? event.keyCode : event.which;
@@ -29,7 +39,7 @@ zul.fiddle.tagbox.Tagbox = zk.$extends(zk.Widget, {
 					while(lastchild){
 						if(lastchild.isRemovable()){
 							lastchild.fireRemove_();
-							break;	
+							break;
 						}
 						lastchild = lastchild.previousSibling;
 					}
@@ -63,7 +73,7 @@ zul.fiddle.tagbox.Tagbox = zk.$extends(zk.Widget, {
 		return true;
 	},
 	fireAddTag_: function(tagName){
-		this.fire("onAddTag", {
+		this.fire("onTagInput", {
 			value: tagName
 		});
 	},
@@ -76,7 +86,7 @@ zul.fiddle.tagbox.Tagbox = zk.$extends(zk.Widget, {
 			jq(this.$n("new")).before(out.join(""));
 		}
 		child.bind(desktop);
-	},	
+	},
 	_doClearInput: function(evt){
 		this.getInputNode().value ="";
 	},

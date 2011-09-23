@@ -7,7 +7,9 @@ function (out) {
 	for (var w = this.firstChild; w; w = w.nextSibling)
 		w.redraw(out);
 
-	out.push('<li id="',uuid,'-new" class="z-tag-new">',
+	out.push('<li id="',uuid,'-new" ',
+			(this._insertable ?  '' : ' style="display:none;" '),
+			' class="z-tag-new">',
 			'<input id="',uuid,'-new-input" type="text" value=""  autocomplete="off">',
 		'</li>'
 	);

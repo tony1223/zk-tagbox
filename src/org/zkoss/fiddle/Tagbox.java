@@ -2,6 +2,7 @@ package org.zkoss.fiddle;
 
 import java.lang.reflect.InvocationTargetException;
 
+import org.zkoss.fiddle.tagbox.event.TagInputEvent;
 import org.zkoss.lang.Classes;
 import org.zkoss.lang.Objects;
 import org.zkoss.zk.ui.Component;
@@ -19,7 +20,7 @@ public class Tagbox extends XulElement {
 	private static final String ATTR_ON_INIT_RENDER_POSTED = "org.zkoss.zul.onInitLaterPosted";
 
 	static {
-		addClientEvent(Tagbox.class, "onAddTag", 0);
+		addClientEvent(Tagbox.class, TagInputEvent.ON_TAG_INPUT, 0);
 	}
 
 	private TagRenderer _render;
